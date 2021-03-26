@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         ImageManager().saveImage(INTERNAL_STORAGE)
-            .getDir(Directory())
+            .getDir(Directory().setName("ikan", "ayam", "baju"))
             .getExtension(Extension().setName("ikan"))
             .save(object : ImageManagerCallback {
                 override fun onSuccess() {

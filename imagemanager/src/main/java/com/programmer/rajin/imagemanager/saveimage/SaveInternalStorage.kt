@@ -6,9 +6,15 @@ import com.programmer.rajin.imagemanager.utils.Extension
 import com.programmer.rajin.imagemanager.utils.File
 
 class SaveInternalStorage : ISaveImage {
-    private lateinit var directory: Directory
-    private lateinit var file: File
-    private lateinit var extension: Extension
+    private var directory: Directory
+    private var file: File
+    private var extension: Extension
+
+    init {
+        directory = Directory()
+        file= File()
+        extension = Extension()
+    }
 
     override fun getDir(directory: Directory): ISaveImage {
         this.directory = directory
@@ -27,7 +33,7 @@ class SaveInternalStorage : ISaveImage {
 
 
     override fun save(imageManagerCallback: ImageManagerCallback) {
-        imageManagerCallback.onSuccess()
+
     }
 
     override fun save() {
