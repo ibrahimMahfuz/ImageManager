@@ -1,0 +1,3 @@
+include ':imagemanager'
+include ':app'
+rootProject.name = "ImageManager"
