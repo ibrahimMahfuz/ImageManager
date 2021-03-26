@@ -12,11 +12,12 @@ open class ImageManager {
 
     private lateinit var _saveImage: ISaveImage
 
-    fun saveImage(flag: Int = 0) : ISaveImage {
-        return when(flag){
-            INTERNAL_STORAGE -> SaveInternalStorage()
-            EXTENAL_STORAGE -> SaveExternalStorage()
-            else -> SaveInternalStorage()
+    fun saveImage(flag: Int = INTERNAL_STORAGE) : ISaveImage {
+        when(flag){
+            INTERNAL_STORAGE -> _saveImage = SaveInternalStorage()
+            EXTENAL_STORAGE -> _saveImage = SaveExternalStorage()
+            else -> throw UnknownError("Tidak ada pilihan itu bro")
         }
+        return _saveImage
     }
 }
