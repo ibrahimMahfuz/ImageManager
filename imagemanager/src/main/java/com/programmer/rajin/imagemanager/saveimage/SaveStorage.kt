@@ -15,27 +15,27 @@ open class SaveStorage: Storage(), ISaveImage {
         TODO("Not yet implemented")
     }
 
-    fun getDir(directory: Directory): SaveStorage {
+    fun setDir(directory: Directory): SaveStorage {
         return this.getDir(this, directory)
     }
 
-    fun getDir(dir: String, vararg subdir: String): SaveStorage {
+    fun setDir(dir: String, vararg subdir: String): SaveStorage {
         return this.getDir(this, dir, *subdir)
     }
 
-    fun getFile(file: File): SaveStorage {
+    fun setFile(file: File): SaveStorage {
         return this.getFile(this, file)
     }
 
-    fun getFile(fileName: String): SaveStorage {
+    fun setFile(fileName: String): SaveStorage {
         return this.getFile(this, fileName)
     }
 
-    fun getExtension(extension: Extension): SaveStorage {
+    fun setExtension(extension: Extension): SaveStorage {
         return this.getExtension(this, extension)
     }
 
-    fun getExtension(ext: String): SaveStorage {
+    fun setExtension(ext: String): SaveStorage {
         return this.getExtension(this, ext)
     }
 }

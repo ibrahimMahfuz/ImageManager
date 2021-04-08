@@ -1,5 +1,7 @@
 package com.programmer.rajin.imagemanager
 
+import android.app.Application
+import android.content.Context
 import com.programmer.rajin.imagemanager.retrieveimage.IRetrieveImage
 import com.programmer.rajin.imagemanager.retrieveimage.RetrieveExternalStorage
 import com.programmer.rajin.imagemanager.retrieveimage.RetrieveInternalStorage
@@ -8,7 +10,7 @@ import com.programmer.rajin.imagemanager.saveimage.SaveExternalStorage
 import com.programmer.rajin.imagemanager.saveimage.SaveInternalStorage
 import com.programmer.rajin.imagemanager.saveimage.SaveStorage
 
-open class ImageManager {
+open class ImageManager(private val context: Context) {
     companion object{
         const val INTERNAL_STORAGE = 1
         const val EXTENAL_STORAGE = 2
