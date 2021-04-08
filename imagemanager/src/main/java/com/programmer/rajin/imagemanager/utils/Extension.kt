@@ -1,8 +1,18 @@
 package com.programmer.rajin.imagemanager.utils
 
 class Extension {
-    fun setName(name: String): Extension{
-        print("name is $name")
-        return this
+    companion object{
+        const val JPG = "jpg"
+        const val PNG = "png"
+    }
+
+    var extentionName = ".$PNG"
+    get() = field
+    set(value) {
+        if (value.contains('.')) {
+            value.replace('.',' ').trim().also { field = it }
+            return
+        }
+        field = value
     }
 }

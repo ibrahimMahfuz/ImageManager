@@ -1,42 +1,18 @@
 package com.programmer.rajin.imagemanager.saveimage
 
 import com.programmer.rajin.imagemanager.ImageManagerCallback
+import com.programmer.rajin.imagemanager.Storage
 import com.programmer.rajin.imagemanager.utils.Directory
 import com.programmer.rajin.imagemanager.utils.Extension
 import com.programmer.rajin.imagemanager.utils.File
 
-class SaveInternalStorage : ISaveImage {
-    private var directory: Directory
-    private var file: File
-    private var extension: Extension
-
-    init {
-        directory = Directory()
-        file= File()
-        extension = Extension()
-    }
-
-    override fun getDir(directory: Directory): ISaveImage {
-        this.directory = directory
-        return this
-    }
-
-    override fun getFile(file: File): ISaveImage {
-        this.file = file
-        return this
-    }
-
-    override fun getExtension(extension: Extension): ISaveImage {
-        this.extension = extension
-        return this
-    }
-
-
+class SaveInternalStorage : SaveStorage() {
     override fun save(imageManagerCallback: ImageManagerCallback) {
-
+        TODO("Not yet implemented")
     }
 
     override fun save() {
+        TODO("Not yet implemented")
     }
 
 }
